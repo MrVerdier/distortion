@@ -23,19 +23,24 @@ document.querySelector("h2").textContent = queueData.inQueue;
 
 const divs = document.querySelectorAll(".parent");
 
-/* let value = Array.from(inQueue); */
 
 
-if (queueData.inQueue < 1){
-    document.querySelector(".parent").style.background = "#bada55";
-    document.querySelector(".parent").style.width = inQueue + "px";
+function showit() {
+    document.querySelector(".parent").style.width = `${queueData.inQueue}0px`;
+    
 }
+    
+    divs.forEach(function(div){    
+    if (queueData.inQueue < 1){    
+    document.querySelector(".parent").style.background = "#ff0000";
+        }
+        if (queueData.inQueue < 5){    
+    document.querySelector(".parent").style.background = "#bada55";
+        }
 
-
+   })
 
 //JEG HAR FÅET DEN TIL AT GØRE... ET ELLER ANDET.
 
 
 };
-
-    
